@@ -1,0 +1,93 @@
+@import "media-querys";
+
+/*GRILLAS*/
+
+.gridIndex {
+	display: grid; 
+	grid-template-columns: 3.4fr 2.5fr 0.4fr;
+ 	grid-template-rows: 0.5fr 2fr 0.5fr;
+  grid-template-areas: 
+  "header header header"
+ "section imagen next" 
+  "footer footer footer";
+
+  @include phone {
+  grid-template-columns: 2fr;
+  grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+  grid-template-areas: 
+ "header"
+ "imagen" 
+ "section"
+ "footer"; 
+  }
+ @include tablet {
+  grid-template-columns: 2fr;
+  grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+  grid-template-areas: 
+ "header"
+ "imagen" 
+ "section"
+ "footer"; 
+  }
+
+
+
+}
+
+.gridUxWeb {
+	display: grid; 
+	grid-template-columns: 0.8fr 1fr 1fr 0.2fr;
+ 	grid-template-rows: 0.5fr 2fr 0.5fr;
+ 	grid-row-gap: 16px; 
+  	grid-template-areas: 
+  	"header header header header"
+ 	"texto space1 space2 next" 
+  	"footer footer footer footer";
+
+    @include phone {
+  grid-template-columns: 2fr;
+  grid-template-rows: 0.5fr 1fr 2fr 2fr 0.5fr;
+  grid-row-gap: 16px; 
+    grid-template-areas: 
+    "header"
+  "texto"
+   "space1" 
+   "space2" 
+    "footer";
+      }
+
+      @include tablet {
+   grid-template-columns: 2fr;
+  grid-template-rows: 0.5fr 1fr 2fr 2fr 0.5fr;
+  grid-row-gap: 16px; 
+   grid-template-areas: 
+  "header"
+  "texto"
+  "space1" 
+  "space2" 
+  "footer";
+      }
+  }
+
+
+ .gridTeam {
+	display: grid; 
+	grid-template-columns: 1fr 1fr 1fr 1fr 0.2fr;
+ 	grid-template-rows: 0.5fr 2fr 0.5fr;
+ 	grid-row-gap: 16px;
+  	grid-template-areas: 
+  	"header header header header header"
+ 	"texto animador diseñador programador next" 
+  	"footer footer footer footer footer";
+}
+ 
+ .gridContact {
+	display: grid; 
+	grid-template-columns: 0.5fr 1fr;
+ 	grid-template-rows: 0.5fr 2fr 0.5fr;
+  	grid-template-areas: 
+  	"header header"
+ 	"texto formulario" 
+  	"footer footer";
+}
+

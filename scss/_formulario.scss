@@ -1,0 +1,44 @@
+/*CONTACT US*/
+
+.formulario {
+	grid-area: formulario;
+	background-color: #c1b2ed;
+	border-radius: .5rem;
+	width: 55%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem 1.5rem 1.2rem 1.5rem;	
+	margin-left: 2rem;
+
+		.bottom  {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+
+			input {
+			border-radius: 0.5rem;
+			border:none;
+			width: 100px;
+			height: 30px;
+			font-weight: 700;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+
+			}
+
+			input:hover {
+			color:white;
+			background-color: #a834eb;
+			transform: scale(1.2,1.2);
+			}
+		}
+
+
+}
+
+
+label {
+	font-weight: 700;
+}

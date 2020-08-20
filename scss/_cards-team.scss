@@ -1,0 +1,61 @@
+
+/*CARDS OUR TEAM*/
+
+@each $member, $background, $marginl, $marginR in (animador, linear-gradient(to bottom, #2597BC, #32b7e3), 4rem, 2rem),
+                                  (diseñador, linear-gradient(to bottom, #8836B2, #A845DA), 0.8rem, 1.3rem),
+                                  (programador, linear-gradient(to bottom, #55AC3B, #69D549), 1rem, 0.4rem) {
+  .#{$member}{
+    grid-area: $member;
+	background: $background;
+	margin-left: $marginl;
+	margin-right: $marginR;
+  }
+}
+
+
+$color-font:white;
+$font-sizes: 1rem;
+
+.team {
+	height: 400px;
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	align-items: space-evenly;
+	border-radius: .5rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+		.nombre {
+		color:$color-font;
+		font-size: ($font-sizes)+1rem;
+		font-weight:900;
+		padding-left: 1rem;
+		padding-top: 0.5rem;
+		}
+
+		.frase {
+		font-size: $font-sizes;
+		font-weight:400;
+		font-style: italic;
+		color: $color-font;
+		padding: 1rem;
+		}
+
+		.rol {
+		font-size: ($font-sizes)+0.3rem;
+		font-weight:900;
+		color: $color-font;
+		display: flex;
+		justify-content: center;
+		}
+
+		.imagen {
+		width: 170px;
+		height: 170px;
+		margin-left: 2.4rem;
+		margin-top: 1.6rem;
+		margin-bottom: 1.6rem;
+		}
+}
+
+

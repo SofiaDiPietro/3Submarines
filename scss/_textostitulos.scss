@@ -1,0 +1,140 @@
+@import "media-querys";
+
+
+$padding: 2rem;
+$font-size: 2rem;
+$font-weight: 700;
+$font-color: white;
+
+/*INDEX*/
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 6.25rem; 
+  padding-top: ($padding)+1rem;
+  grid-area: section;
+  
+  @include phone {
+    padding-left: 2rem; 
+    padding-top: 1rem;
+
+  }
+
+  @include tablet {
+    padding-left: 2rem; 
+    padding-top: 1rem;
+
+  }
+
+}
+
+.section__titulo { 
+font-weight: ($font-weight)+200;
+font-size: ($font-size)+1.25rem;
+color: $font-color;
+padding-top:0.5rem;  
+
+@include phone {
+      font-size: 3rem;
+    }
+
+@include tablet {
+      font-size: 5rem;
+    }
+
+}
+
+.section__h5 {
+font-weight: $font-weight;
+font-size: 1.2rem;
+color:$font-color;
+opacity: 60%;
+}
+
+
+.section__parrafo { 
+font-weight: $font-weight;
+font-style: italic; 
+font-size: ($font-size)-0.4rem;
+color: $font-color;
+padding-top: ($padding)-0.5rem;
+}
+
+.section__boton { 
+
+background-color: white;
+border-radius: 0.5rem;
+border:none;
+width: 170px;
+height: 60px;
+margin-left: 90px;
+margin-top: 20px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+#contactus {
+text-decoration: none;
+font-weight:($font-weight)+200;
+font-size: ($font-size)-0.75rem;
+color: black;
+}
+
+
+#contactus:hover {
+	color:#a834eb;
+}
+.section__boton:hover {
+ border-radius: 0;
+ transform: scale(1.2, 1.2)
+}
+
+
+
+/*UX-WEB-TEAM-CONTACT*/
+
+.texto {
+  grid-area: texto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 0.4fr 2fr ;
+  grid-template-areas: 
+    "h1"
+    "p";
+  padding-left: ($padding)+4.25rem;
+
+}
+
+.texto__titulo {
+  color:$font-color; 
+  grid-area: h1;
+  font-weight: ($font-weight)+200;
+  font-size: ($font-size)+0.5rem;
+  }
+
+.texto__titulo--sizeWeb {
+  font-size: $font-size;
+  }
+
+.texto__subtitulo {
+  color: white;
+  font-weight: $font-weight;
+  font-size: ($font-size)-0.5rem;
+  font-style: italic;
+  grid-area: p;
+  padding-top: ($padding)-1rem;
+}
+
+.texto__parrafo  {
+  grid-area: p;
+  color: $font-color;
+  font-weight: $font-weight;
+  font-style: italic; 
+  font-size: ($font-size)-0.75rem;
+  }
+
+  .texto__parrafo-padding {
+  padding-top: ($padding)-1rem;
+}
+

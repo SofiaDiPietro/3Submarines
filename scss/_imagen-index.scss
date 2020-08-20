@@ -1,0 +1,35 @@
+/*IMAGEN INDEX*/
+
+.imagen {
+  grid-area: imagen;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.imagen__circulo {
+	width: 430px;
+  position:absolute;
+  z-index:1;
+}
+
+.imagen__carousel {
+  position:absolute;
+  z-index: 2; 
+}
+
+.w-100 {
+max-width: 430px;
+}
+
+
+.next { 
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  grid-area: next;
+ }
+
+ .next__flecha {
+  max-height: 20px
+ }
