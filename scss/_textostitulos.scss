@@ -2,11 +2,22 @@
 
 
 $padding: 2rem;
-$font-size: 2rem;
-$font-weight: 700;
-$font-color: white;
+$font-s: 2rem;
+$font-w: 700;
+$font-c: white;
 
 /*INDEX*/
+
+@each $element, $color, $font-weight, $font-style, $font-size in (Stitulo, white, 900, none, 3.25rem),
+                          (Sh5, white, 700, none, 1.2rem),
+                          (Sparrafo, white, 700, italic, 1.6rem,){
+  .#{$element}{
+    color:$color;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-size: $font-size;
+  }
+}
 
 section {
   display: flex;
@@ -16,13 +27,7 @@ section {
   padding-top: ($padding)+1rem;
   grid-area: section;
   
-  @include phone {
-    padding-left: 2rem; 
-    padding-top: 1rem;
-
-  }
-
-  @include tablet {
+  @include phone and tablet {
     padding-left: 2rem; 
     padding-top: 1rem;
 
@@ -30,40 +35,28 @@ section {
 
 }
 
-.section__titulo { 
-font-weight: ($font-weight)+200;
-font-size: ($font-size)+1.25rem;
-color: $font-color;
+.Stitulo { 
 padding-top:0.5rem;  
 
-@include phone {
-      font-size: 3rem;
-    }
+  @include phone {
+        font-size: 3rem;
+      }
 
-@include tablet {
-      font-size: 5rem;
-    }
+  @include tablet {
+        font-size: 5rem;
+      }
 
 }
 
-.section__h5 {
-font-weight: $font-weight;
-font-size: 1.2rem;
-color:$font-color;
+.Sh5 {
 opacity: 60%;
 }
 
-
-.section__parrafo { 
-font-weight: $font-weight;
-font-style: italic; 
-font-size: ($font-size)-0.4rem;
-color: $font-color;
+.Sparrafo { 
 padding-top: ($padding)-0.5rem;
 }
 
-.section__boton { 
-
+.Sboton { 
 background-color: white;
 border-radius: 0.5rem;
 border:none;
@@ -76,8 +69,8 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 
 #contactus {
 text-decoration: none;
-font-weight:($font-weight)+200;
-font-size: ($font-size)-0.75rem;
+font-weight:($font-w)+200;
+font-size: ($font-s)-0.75rem;
 color: black;
 }
 
@@ -85,7 +78,7 @@ color: black;
 #contactus:hover {
 	color:#a834eb;
 }
-.section__boton:hover {
+.Sboton:hover {
  border-radius: 0;
  transform: scale(1.2, 1.2)
 }
@@ -93,6 +86,19 @@ color: black;
 
 
 /*UX-WEB-TEAM-CONTACT*/
+
+@each $text, $grid, $color, $font-weight, $font-style, $font-size in (titulo, h1, white, 900, none, 2.5rem),
+                          (subtitulo, p, white, 700, italic, 1.5rem),
+                          (parrafo, p, white, 700, italic, 1.25rem,), 
+                          (tituloWeb, h1, white, 900, none, 2rem){
+  .#{$text}{
+    grid-area: $grid;
+    color:$color;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-size: $font-size;
+  }
+}
 
 .texto {
   grid-area: texto;
@@ -104,37 +110,18 @@ color: black;
     "p";
   padding-left: ($padding)+4.25rem;
 
-}
-
-.texto__titulo {
-  color:$font-color; 
-  grid-area: h1;
-  font-weight: ($font-weight)+200;
-  font-size: ($font-size)+0.5rem;
+    .subtitulo {
+    padding-top: ($padding)-1rem;
   }
 
-.texto__titulo--sizeWeb {
-  font-size: $font-size;
+    .parrafo2  {
+   padding-top: 4rem
   }
 
-.texto__subtitulo {
-  color: white;
-  font-weight: $font-weight;
-  font-size: ($font-size)-0.5rem;
-  font-style: italic;
-  grid-area: p;
+   .parrafo-paddingWeb {
   padding-top: ($padding)-1rem;
-}
-
-.texto__parrafo  {
-  grid-area: p;
-  color: $font-color;
-  font-weight: $font-weight;
-  font-style: italic; 
-  font-size: ($font-size)-0.75rem;
   }
 
-  .texto__parrafo-padding {
-  padding-top: ($padding)-1rem;
 }
+
 

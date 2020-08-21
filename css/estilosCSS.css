@@ -99,6 +99,24 @@ body {
   grid-template-areas: "header header" "texto formulario"  "footer footer"; }
 
 /*INDEX*/
+.Stitulo {
+  color: white;
+  font-weight: 900;
+  font-style: none;
+  font-size: 3.25rem; }
+
+.Sh5 {
+  color: white;
+  font-weight: 700;
+  font-style: none;
+  font-size: 1.2rem; }
+
+.Sparrafo {
+  color: white;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.6rem; }
+
 section {
   display: flex;
   flex-direction: column;
@@ -106,41 +124,26 @@ section {
   padding-left: 6.25rem;
   padding-top: 3rem;
   grid-area: section; }
-  @media only screen and (max-width: 320px) {
-    section {
-      padding-left: 2rem;
-      padding-top: 1rem; } }
-  @media only screen and (max-width: 768px) {
-    section {
-      padding-left: 2rem;
-      padding-top: 1rem; } }
+  section and tablet {
+    padding-left: 2rem;
+    padding-top: 1rem; }
 
-.section__titulo {
-  font-weight: 900;
-  font-size: 3.25rem;
-  color: white;
+.Stitulo {
   padding-top: 0.5rem; }
   @media only screen and (max-width: 320px) {
-    .section__titulo {
+    .Stitulo {
       font-size: 3rem; } }
   @media only screen and (max-width: 768px) {
-    .section__titulo {
+    .Stitulo {
       font-size: 5rem; } }
 
-.section__h5 {
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: white;
+.Sh5 {
   opacity: 60%; }
 
-.section__parrafo {
-  font-weight: 700;
-  font-style: italic;
-  font-size: 1.6rem;
-  color: white;
+.Sparrafo {
   padding-top: 1.5rem; }
 
-.section__boton {
+.Sboton {
   background-color: white;
   border-radius: 0.5rem;
   border: none;
@@ -159,11 +162,39 @@ section {
 #contactus:hover {
   color: #a834eb; }
 
-.section__boton:hover {
+.Sboton:hover {
   border-radius: 0;
   transform: scale(1.2, 1.2); }
 
 /*UX-WEB-TEAM-CONTACT*/
+.titulo {
+  grid-area: h1;
+  color: white;
+  font-weight: 900;
+  font-style: none;
+  font-size: 2.5rem; }
+
+.subtitulo {
+  grid-area: p;
+  color: white;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.5rem; }
+
+.parrafo {
+  grid-area: p;
+  color: white;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.25rem; }
+
+.tituloWeb {
+  grid-area: h1;
+  color: white;
+  font-weight: 900;
+  font-style: none;
+  font-size: 2rem; }
+
 .texto {
   grid-area: texto;
   display: grid;
@@ -171,33 +202,12 @@ section {
   grid-template-rows: 0.4fr 2fr;
   grid-template-areas: "h1" "p";
   padding-left: 6.25rem; }
-
-.texto__titulo {
-  color: white;
-  grid-area: h1;
-  font-weight: 900;
-  font-size: 2.5rem; }
-
-.texto__titulo--sizeWeb {
-  font-size: 2rem; }
-
-.texto__subtitulo {
-  color: white;
-  font-weight: 700;
-  font-size: 1.5rem;
-  font-style: italic;
-  grid-area: p;
-  padding-top: 1rem; }
-
-.texto__parrafo {
-  grid-area: p;
-  color: white;
-  font-weight: 700;
-  font-style: italic;
-  font-size: 1.25rem; }
-
-.texto__parrafo-padding {
-  padding-top: 1rem; }
+  .texto .subtitulo {
+    padding-top: 1rem; }
+  .texto .parrafo2 {
+    padding-top: 4rem; }
+  .texto .parrafo-paddingWeb {
+    padding-top: 1rem; }
 
 /*IMAGEN INDEX*/
 .imagen {
@@ -222,9 +232,8 @@ section {
   justify-content: center;
   align-self: center;
   grid-area: next; }
-
-.next__flecha {
-  max-height: 20px; }
+  .next .flecha {
+    max-height: 20px; }
 
 /*CARDS UX WEB*/
 .literato {
@@ -350,7 +359,7 @@ section {
   grid-area: animador;
   background: linear-gradient(to bottom, #2597BC, #32b7e3);
   margin-left: 4rem;
-  margin-right: 4rem; }
+  margin-right: 1rem; }
 
 .diseñador {
   grid-area: diseñador;
