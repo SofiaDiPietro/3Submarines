@@ -1,7 +1,7 @@
 
 /*CARDS OUR TEAM*/
 
-@each $member, $background, $marginl, $marginR in (animador, linear-gradient(to bottom, #2597BC, #32b7e3), 4rem, 4rem),
+@each $member, $background, $marginl, $marginR in (animador, linear-gradient(to bottom, #2597BC, #32b7e3), 4rem, 1rem),
                                   (diseñador, linear-gradient(to bottom, #8836B2, #A845DA), 1.3rem, 1.3rem),
                                   (programador, linear-gradient(to bottom, #55AC3B, #69D549), 1rem, 0.4rem) {
   .#{$member}{
