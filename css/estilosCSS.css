@@ -81,12 +81,11 @@ body {
       position: absolute;
       z-index: 1; } }
 
-#hamburguesa {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: -1rem; }
-
 @media only screen and (max-width: 600px) {
+  #hamburguesa {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -1rem; }
   #menu-toggle {
     display: none; }
   #menu {
