@@ -1,3 +1,6 @@
+@import "media-querys";
+
+
 $padding-size: 2rem;
 $color-font:white;
 
@@ -8,7 +11,6 @@ $color-font:white;
 #cabecera {
    	display: grid;
    	grid-template-columns: 0.8fr 1fr;
- 	grid-template-rows: 1fr;
  	grid-template-areas: 
   	"logo nav";
 	width: 100%;
@@ -19,16 +21,44 @@ $color-font:white;
 	width: 50px;
 	margin-left: 100px;
 	margin-top:20px;	
+
+			@include phone {
+			margin-left: 2rem;
+		  	}
+
+		  	@include tablet {
+			margin-left: 2rem;
+		  	}
 	}
 		
 	nav {
 	grid-area: nav;
+
+		@include phone {
+			margin-top: 2rem;
+			margin-bottom: 0;
+			display: flex;
+		  	flex-direction: row;
+		 	justify-content: flex-end;
+
+		  	}
+
+		@include tablet {
+			margin-top: 2rem;
+		  	}
 
 		ul {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
 		padding-top: $padding-size;
+
+
+				@include phone {
+				display: flex;
+				flex-direction: column;
+				padding-top: 2rem;
+				}
 		}
 
 		li {
@@ -53,9 +83,56 @@ $color-font:white;
 		border-bottom:3px solid;
 		opacity: 0.8;
 		padding-bottom:($padding-size)-1.2rem;
+
+
+		@include phone {
+			margin-top: 2rem;
+			margin-bottom: 0;
+
+		  	}
 		}
 
 	}
 }
 
+#hamburguesa, #menu-toggle {
+ display: none;
 
+ 	@include phone {
+ 		display: flex;
+		 position: absolute;
+		  z-index: 1;
+ 		}
+
+}
+
+#hamburguesa {
+	display:flex;
+	flex-direction:column;
+	margin-bottom: -1rem;
+}
+
+
+
+@include phone {
+
+
+		#menu-toggle {
+		  display: none;
+		}
+
+		#menu {
+		  width: 9rem;
+		  overflow: hidden;
+		  max-height: 0;
+		  padding: 0;
+		  margin: 0 auto;
+		  -webkit-transition: all 0.3s ease;
+		}
+
+	#menu-toggle:checked + #menu {
+	 max-height: 200px;
+			}
+
+  } 
+    

@@ -1,3 +1,5 @@
+@import "media-querys";
+
 /*IMAGEN INDEX*/
 
 .imagen {
@@ -5,12 +7,27 @@
   align-items: center;
   justify-content: center;
 
-}
+  @include phone {
+        margin-top:10rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+}   
 
 .imagen__circulo {
-	width: 430px;
+	width: 27rem;
   position:absolute;
   z-index:1;
+
+    @include phone {
+        width: 20rem;
+          }
+
+    @include tablet {
+        width: 19rem;
+          }
 }
 
 .imagen__carousel {
@@ -19,7 +36,15 @@
 }
 
 .w-100 {
-max-width: 430px;
+max-width: 27rem;
+
+    @include phone {
+        max-width: 20rem;
+          }
+
+    @include tablet {
+       max-width: 19rem;
+          }
 }
 
 
