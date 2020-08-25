@@ -16,11 +16,15 @@ $color-font:white;
 	width: 100%;
 	grid-area: header;
 
+		@include phone {
+		grid-template-columns: 0.2fr 1fr;
+		} 
+
 	.logo {
-	grid-area: logo;
-	width: 50px;
-	margin-left: 100px;
-	margin-top:20px;	
+		grid-area: logo;
+		width: 50px;
+		margin-left: 100px;
+		margin-top:20px;	
 
 			@include phone {
 			margin-left: 2rem;
@@ -48,45 +52,62 @@ $color-font:white;
 				 }
 
 			ul {
-			display: flex;
-			flex-direction: row;
-			justify-content: flex-start;
-			padding-top: $padding-size;
-
-				@include phone {
 				display: flex;
-				flex-direction: column;
-				padding-top: 2rem;
+				flex-direction: row;
+				justify-content: flex-start;
+				padding-top: $padding-size;
+
+					@include phone {
+					display: flex;
+					flex-direction: column;
+					align-items:center;
+					justify-content:center;
+					padding-top: 4rem;
+					overflow: hidden;
+					max-height: 0;
+					padding: 0;
+					margin-right: 4.5rem;
+					-webkit-transition: all 0.3s ease;
+					}
 				}
-			}
 
 			li {
-			list-style:none;
+				list-style:none;
+
+					@include phone {
+						padding-top:1rem;
+					}
 			}
 			
 			a {
-			text-decoration: none;
-			font-weight: 700;
-			font-size: ($padding-size)-0.90rem;
-			color: $color-font;
-			padding-left: ($padding-size)-1rem;
-			padding-right: ($padding-size)-1rem;
+				text-decoration: none;
+				font-weight: 700;
+				font-size: ($padding-size)-0.90rem;
+				color: $color-font;
+				padding-left: ($padding-size)-1rem;
+				padding-right: ($padding-size)-1rem;
+
+				@include phone {
+						padding-left:0rem;
+						padding-right:0rem;
+					}
+
 			}
 			
 			a:hover {
-			color: orange;
+				color: orange;
 			}
 			
 			#current {
-			color:$color-font;
-			border-bottom:3px solid;
-			opacity: 0.8;
-			padding-bottom:($padding-size)-1.2rem;
+				color:$color-font;
+				border-bottom:3px solid;
+				opacity: 0.8;
+				padding-bottom:($padding-size)-1.2rem;
 
-				@include phone {
-				margin-top: 2rem;
-				margin-bottom: 0;
-				}
+					@include phone {
+					border-bottom:2px solid;
+					padding-bottom: 0.2rem;
+					}
 			}
 
 		}
@@ -97,40 +118,35 @@ $color-font:white;
  display: none;
 
  	@include phone {
- 		display: flex;
-		 position: absolute;
-		  z-index: 1;
- 		}
+ 	display: flex;
+ 	flex-direction:column;
+	position: absolute;
+	z-index: 1;
+ 	}
 
 }
 
 
+
 @include phone {
 	
-
-	#hamburguesa {
-	display:flex;
-	flex-direction:column;
-	margin-bottom: -1rem;
+	.raya1, .raya2 {
+	width:30px;
+	height:2px;
+	background-color:white;
 	}
+
+	.raya1{
+	margin-bottom: 0.5rem;
+	}
+
 
 	#menu-toggle {
 	display: none;
 	}
-	
 
-	#menu {
-	width: 9rem;
-	overflow: hidden;
-	max-height: 0;
-	padding: 0;
-	margin: 0 auto;
-	-webkit-transition: all 0.3s ease;
-	}
-
-	#menu-toggle:checked + #menu {
+	#menu-toggle:checked + ul {
 	max-height: 200px;
-
 	}
 
   } 

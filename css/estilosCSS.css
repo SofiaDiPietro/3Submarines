@@ -19,6 +19,9 @@ body {
   grid-template-areas: "logo nav";
   width: 100%;
   grid-area: header; }
+  @media only screen and (max-width: 600px) {
+    #cabecera {
+      grid-template-columns: 0.2fr 1fr; } }
   #cabecera .logo {
     grid-area: logo;
     width: 50px;
@@ -51,9 +54,19 @@ body {
         #cabecera nav ul {
           display: flex;
           flex-direction: column;
-          padding-top: 2rem; } }
+          align-items: center;
+          justify-content: center;
+          padding-top: 4rem;
+          overflow: hidden;
+          max-height: 0;
+          padding: 0;
+          margin-right: 4.5rem;
+          -webkit-transition: all 0.3s ease; } }
     #cabecera nav li {
       list-style: none; }
+      @media only screen and (max-width: 600px) {
+        #cabecera nav li {
+          padding-top: 1rem; } }
     #cabecera nav a {
       text-decoration: none;
       font-weight: 700;
@@ -61,6 +74,10 @@ body {
       color: white;
       padding-left: 1rem;
       padding-right: 1rem; }
+      @media only screen and (max-width: 600px) {
+        #cabecera nav a {
+          padding-left: 0rem;
+          padding-right: 0rem; } }
     #cabecera nav a:hover {
       color: orange; }
     #cabecera nav #current {
@@ -70,32 +87,28 @@ body {
       padding-bottom: 0.8rem; }
       @media only screen and (max-width: 600px) {
         #cabecera nav #current {
-          margin-top: 2rem;
-          margin-bottom: 0; } }
+          border-bottom: 2px solid;
+          padding-bottom: 0.2rem; } }
 
 #hamburguesa, #menu-toggle {
   display: none; }
   @media only screen and (max-width: 600px) {
     #hamburguesa, #menu-toggle {
       display: flex;
+      flex-direction: column;
       position: absolute;
       z-index: 1; } }
 
 @media only screen and (max-width: 600px) {
-  #hamburguesa {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: -1rem; }
+  .raya1, .raya2 {
+    width: 30px;
+    height: 2px;
+    background-color: white; }
+  .raya1 {
+    margin-bottom: 0.5rem; }
   #menu-toggle {
     display: none; }
-  #menu {
-    width: 9rem;
-    overflow: hidden;
-    max-height: 0;
-    padding: 0;
-    margin: 0 auto;
-    -webkit-transition: all 0.3s ease; }
-  #menu-toggle:checked + #menu {
+  #menu-toggle:checked + ul {
     max-height: 200px; } }
 
 /*GRILLAS*/
