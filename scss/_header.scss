@@ -32,70 +32,68 @@ $color-font:white;
 	}
 		
 	nav {
-	grid-area: nav;
+		grid-area: nav;
 
-		@include phone {
-			margin-top: 2rem;
-			margin-bottom: 0;
+				@include phone {
+				margin-top: 2rem;
+				margin-bottom: 0;
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-end;
+
+				  	}
+
+				@include tablet {
+				margin-top: 2rem;
+				 }
+
+			ul {
 			display: flex;
-		  	flex-direction: row;
-		 	justify-content: flex-end;
-
-		  	}
-
-		@include tablet {
-			margin-top: 2rem;
-		  	}
-
-		ul {
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
-		padding-top: $padding-size;
-
+			flex-direction: row;
+			justify-content: flex-start;
+			padding-top: $padding-size;
 
 				@include phone {
 				display: flex;
 				flex-direction: column;
 				padding-top: 2rem;
 				}
-		}
+			}
 
-		li {
-		list-style:none;
-		}
-		
-		a {
-		text-decoration: none;
-		font-weight: 700;
-		font-size: ($padding-size)-0.90rem;
-		color: $color-font;
-		padding-left: ($padding-size)-1rem;
-		padding-right: ($padding-size)-1rem;
-		}
-		
-		a:hover {
-		color: orange;
-		}
-		
-		#current {
-		color:$color-font;
-		border-bottom:3px solid;
-		opacity: 0.8;
-		padding-bottom:($padding-size)-1.2rem;
+			li {
+			list-style:none;
+			}
+			
+			a {
+			text-decoration: none;
+			font-weight: 700;
+			font-size: ($padding-size)-0.90rem;
+			color: $color-font;
+			padding-left: ($padding-size)-1rem;
+			padding-right: ($padding-size)-1rem;
+			}
+			
+			a:hover {
+			color: orange;
+			}
+			
+			#current {
+			color:$color-font;
+			border-bottom:3px solid;
+			opacity: 0.8;
+			padding-bottom:($padding-size)-1.2rem;
 
+				@include phone {
+				margin-top: 2rem;
+				margin-bottom: 0;
+				}
+			}
 
-		@include phone {
-			margin-top: 2rem;
-			margin-bottom: 0;
-
-		  	}
 		}
-
-	}
 }
 
-#hamburguesa, #menu-toggle {
+
+#hamburguesa, #menu-toggle, {
  display: none;
 
  	@include phone {
@@ -106,33 +104,34 @@ $color-font:white;
 
 }
 
-#hamburguesa {
+
+@include phone {
+	
+
+	#hamburguesa {
 	display:flex;
 	flex-direction:column;
 	margin-bottom: -1rem;
-}
+	}
 
+	#menu-toggle {
+	display: none;
+	}
+	
 
-
-@include phone {
-
-
-		#menu-toggle {
-		  display: none;
-		}
-
-		#menu {
-		  width: 9rem;
-		  overflow: hidden;
-		  max-height: 0;
-		  padding: 0;
-		  margin: 0 auto;
-		  -webkit-transition: all 0.3s ease;
-		}
+	#menu {
+	width: 9rem;
+	overflow: hidden;
+	max-height: 0;
+	padding: 0;
+	margin: 0 auto;
+	-webkit-transition: all 0.3s ease;
+	}
 
 	#menu-toggle:checked + #menu {
-	 max-height: 200px;
-			}
+	max-height: 200px;
+
+	}
 
   } 
     
