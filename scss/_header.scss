@@ -18,6 +18,8 @@ $color-font:white;
 
 		@include phone {
 		grid-template-columns: 0.2fr 1fr;
+		grid-template-areas: 
+  		"logo nav";
 		} 
 
 	.logo {

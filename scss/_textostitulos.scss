@@ -28,9 +28,9 @@ section {
   grid-area: section;
 
    @include phone {
-    padding-left: 1.8rem; 
-    padding-top: 9rem;
-    padding-right: 0.5rem;
+    padding-left: 8%; 
+    padding-top: 40%;
+    padding-right: 3%;
 
     justify-content: center;
   }
@@ -47,25 +47,37 @@ section {
 padding-top:0.5rem;  
 
   @include phone {
-        font-size: 2.5rem;
+        font-size: 12vw;;
       }
 
   @include tablet {
-        font-size: 5rem;
+        font-size: 12vw;
       }
 
 }
 
 .Sh5 {
 opacity: 60%;
+  
+  @include phone {
+          font-size: 5vw;
+        }
+
+  @include tablet {
+        font-size: 5vw;
+      }
 }
 
 .Sparrafo { 
 padding-top: ($padding)-0.5rem;
 
   @include phone {
-          font-size: 1.3rem;
+          font-size: 5.5vw;
         }
+
+  @include tablet {
+        font-size: 5.5vw;
+      }
 
 }
 
@@ -80,8 +92,15 @@ margin-top: 20px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       
       @include phone {
-          margin-left:3.5rem;
+          margin-left:20vw;
         }
+
+      @include tablet {
+        margin-left:20vw;
+        width: 200px;
+        height: 90px;
+        
+      }
 
 }
 

@@ -19,30 +19,31 @@ body {
   grid-template-areas: "logo nav";
   width: 100%;
   grid-area: header; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     #cabecera {
-      grid-template-columns: 0.2fr 1fr; } }
+      grid-template-columns: 0.2fr 1fr;
+      grid-template-areas: "logo nav"; } }
   #cabecera .logo {
     grid-area: logo;
     width: 50px;
     margin-left: 100px;
     margin-top: 20px; }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 768px) {
       #cabecera .logo {
         margin-left: 2rem; } }
-    @media only screen and (min-width: 600px) and (max-width: 768px) {
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
       #cabecera .logo {
         margin-left: 2rem; } }
   #cabecera nav {
     grid-area: nav; }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 768px) {
       #cabecera nav {
         margin-top: 2rem;
         margin-bottom: 0;
         display: flex;
         flex-direction: row;
         justify-content: flex-end; } }
-    @media only screen and (min-width: 600px) and (max-width: 768px) {
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
       #cabecera nav {
         margin-top: 2rem; } }
     #cabecera nav ul {
@@ -50,7 +51,7 @@ body {
       flex-direction: row;
       justify-content: flex-start;
       padding-top: 2rem; }
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 768px) {
         #cabecera nav ul {
           display: flex;
           flex-direction: column;
@@ -64,7 +65,7 @@ body {
           -webkit-transition: all 0.3s ease; } }
     #cabecera nav li {
       list-style: none; }
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 768px) {
         #cabecera nav li {
           padding-top: 1rem; } }
     #cabecera nav a {
@@ -74,7 +75,7 @@ body {
       color: white;
       padding-left: 1rem;
       padding-right: 1rem; }
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 768px) {
         #cabecera nav a {
           padding-left: 0rem;
           padding-right: 0rem; } }
@@ -85,21 +86,21 @@ body {
       border-bottom: 3px solid;
       opacity: 0.8;
       padding-bottom: 0.8rem; }
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 768px) {
         #cabecera nav #current {
           border-bottom: 2px solid;
           padding-bottom: 0.2rem; } }
 
 #hamburguesa, #menu-toggle {
   display: none; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     #hamburguesa, #menu-toggle {
       display: flex;
       flex-direction: column;
       position: absolute;
       z-index: 1; } }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .raya1, .raya2 {
     width: 30px;
     height: 2px;
@@ -117,12 +118,12 @@ body {
   grid-template-columns: 3.4fr 2.5fr 0.4fr;
   grid-template-rows: 0.5fr 2fr 0.5fr;
   grid-template-areas: "header header header" "section imagen next"  "footer footer footer"; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     .gridIndex {
       grid-template-columns: 100%;
       grid-template-rows: 0.3fr 0.9fr 2fr 1fr;
       grid-template-areas: "header" "imagen"  "section" "footer"; } }
-  @media only screen and (min-width: 600px) and (max-width: 768px) {
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
     .gridIndex {
       grid-template-columns: 100%;
       grid-template-rows: 0.3fr 0.9fr 2fr 1fr;
@@ -134,13 +135,13 @@ body {
   grid-template-rows: 0.5fr 2fr 0.5fr;
   grid-row-gap: 16px;
   grid-template-areas: "header header header header" "texto space1 space2 next"  "footer footer footer footer"; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     .gridUxWeb {
       grid-template-columns: 2fr;
       grid-template-rows: 0.5fr 1fr 2fr 2fr 0.5fr;
       grid-row-gap: 16px;
       grid-template-areas: "header" "texto" "space1"  "space2"  "footer"; } }
-  @media only screen and (min-width: 600px) and (max-width: 768px) {
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
     .gridUxWeb {
       grid-template-columns: 2fr;
       grid-template-rows: 0.5fr 1fr 2fr 2fr 0.5fr;
@@ -186,34 +187,43 @@ section {
   padding-left: 6.25rem;
   padding-top: 3rem;
   grid-area: section; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     section {
-      padding-left: 1.8rem;
-      padding-top: 9rem;
-      padding-right: 0.5rem;
+      padding-left: 8%;
+      padding-top: 40%;
+      padding-right: 3%;
       justify-content: center; } }
-  @media only screen and (min-width: 600px) and (max-width: 768px) {
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
     section {
       padding-left: 2rem;
       padding-top: 6rem; } }
 
 .Stitulo {
   padding-top: 0.5rem; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     .Stitulo {
-      font-size: 2.5rem; } }
-  @media only screen and (min-width: 600px) and (max-width: 768px) {
+      font-size: 12vw; } }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
     .Stitulo {
-      font-size: 5rem; } }
+      font-size: 12vw; } }
 
 .Sh5 {
   opacity: 60%; }
+  @media only screen and (max-width: 768px) {
+    .Sh5 {
+      font-size: 5vw; } }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .Sh5 {
+      font-size: 5vw; } }
 
 .Sparrafo {
   padding-top: 1.5rem; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     .Sparrafo {
-      font-size: 1.3rem; } }
+      font-size: 5.5vw; } }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .Sparrafo {
+      font-size: 5.5vw; } }
 
 .Sboton {
   background-color: white;
@@ -224,9 +234,14 @@ section {
   margin-left: 90px;
   margin-top: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     .Sboton {
-      margin-left: 3.5rem; } }
+      margin-left: 20vw; } }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .Sboton {
+      margin-left: 20vw;
+      width: 200px;
+      height: 90px; } }
 
 #contactus {
   text-decoration: none;
@@ -289,9 +304,17 @@ section {
   grid-area: imagen;
   align-items: center;
   justify-content: center; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     .imagen {
-      margin-top: 10rem;
+      margin-top: 40%;
+      margin-bottom: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: center; } }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .imagen {
+      margin-top: 40%;
+      margin-bottom: 35%;
       display: flex;
       align-items: center;
       justify-content: center; } }
@@ -300,12 +323,12 @@ section {
   width: 27rem;
   position: absolute;
   z-index: 1; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     .imagen__circulo {
-      width: 20rem; } }
-  @media only screen and (min-width: 600px) and (max-width: 768px) {
+      width: 100%; } }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
     .imagen__circulo {
-      width: 19rem; } }
+      width: 100%; } }
 
 .imagen__carousel {
   position: absolute;
@@ -313,12 +336,12 @@ section {
 
 .w-100 {
   max-width: 27rem; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     .w-100 {
-      max-width: 20rem; } }
-  @media only screen and (min-width: 600px) and (max-width: 768px) {
+      max-width: 100%; } }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
     .w-100 {
-      max-width: 19rem; } }
+      max-width: 100%; } }
 
 .next {
   display: flex;
@@ -545,30 +568,32 @@ label {
   color: #bdbdbd;
   padding-top: 0.4rem;
   grid-area: footer; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     #pie {
       display: flex;
       flex-direction: column;
-      justify-content: flex-star; } }
+      justify-content: flex-star;
+      font-size: 0.8rem;
+      height: 40px; } }
   #pie img {
     max-width: 1.2rem; }
   #pie #redes {
     display: flex;
     justify-content: space-evenly;
     padding-left: 100px; }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 768px) {
       #pie #redes {
         padding-left: 1.5rem;
         justify-content: flex-start; } }
   #pie a {
     padding-left: 10px;
     padding-bottom: 5px; }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 768px) {
       #pie a {
         padding-left: 1rem; } }
   #pie #copyright {
     padding-right: 6.25rem; }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 768px) {
       #pie #copyright {
         padding-right: 0;
         padding-left: 1.5rem; } }

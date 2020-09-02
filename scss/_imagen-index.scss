@@ -8,7 +8,16 @@
   justify-content: center;
 
   @include phone {
-        margin-top:10rem;
+        margin-top:40%;
+        margin-bottom:10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+   @include tablet {
+        margin-top:40%;
+        margin-bottom:35%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -22,11 +31,11 @@
   z-index:1;
 
     @include phone {
-        width: 20rem;
+        width: 100%;
           }
 
     @include tablet {
-        width: 19rem;
+        width: 100%;
           }
 }
 
@@ -39,11 +48,11 @@
 max-width: 27rem;
 
     @include phone {
-        max-width: 20rem;
+        max-width: 100%;
           }
 
     @include tablet {
-       max-width: 19rem;
+       max-width: 100%;
           }
 }
 
