@@ -1,14 +1,20 @@
+@import "media-querys";
 
 /*CARDS OUR TEAM*/
 
-@each $member, $background, $marginl, $marginR in (animador, linear-gradient(to bottom, #2597BC, #32b7e3), 4rem, 1rem),
-                                  (diseñador, linear-gradient(to bottom, #8836B2, #A845DA), 1.3rem, 1.3rem),
-                                  (programador, linear-gradient(to bottom, #55AC3B, #69D549), 1rem, 0.4rem) {
+@each $member, $background, $marginl, $marginR, $marginlr, $marginRr in (animador, linear-gradient(to bottom, #2597BC, #32b7e3), 4rem, 1rem, 4.5vh, 4.5vh),
+                                  (diseñador, linear-gradient(to bottom, #8836B2, #A845DA), 1.3rem, 1.3rem, 4.5vh, 4.5vh),
+                                  (programador, linear-gradient(to bottom, #55AC3B, #69D549), 1rem, 0.4rem, 4.5vh, 4.5vh) {
   .#{$member}{
     grid-area: $member;
 	background: $background;
 	margin-left: $marginl;
 	margin-right: $marginR;
+
+	@include phone {	
+		margin-left: $marginlr;
+		margin-right: $marginRr;
+		}
   }
 }
 
@@ -24,6 +30,12 @@ $font-sizes: 1rem;
 	align-items: space-evenly;
 	border-radius: .5rem;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+			@include phone {	
+			width: 90vw;
+			justify-content:center;
+			align-items: center;
+			}
 
 		.nombre {
 		color:$color-font;
@@ -49,12 +61,19 @@ $font-sizes: 1rem;
 		justify-content: center;
 		}
 
-		.imagen {
+		.Timagen {
 		width: 170px;
-		height: 170px;
 		margin-left: 2.4rem;
 		margin-top: 1.6rem;
 		margin-bottom: 1.6rem;
+
+			@include phone {	
+			max-width: 50%;
+			height:auto;
+			margin-left: 0;
+			margin-top: 1rem;
+			margin-bottom: 1.6rem;
+			}
 		}
 }
 

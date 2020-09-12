@@ -1,3 +1,5 @@
+@import "media-querys";
+
 /*CARDS UX WEB*/
 
 @each $product, $grid in (literato, space1),
@@ -7,14 +9,20 @@
   .#{$product}{
     grid-area: $grid;
 
-		@each $descripcion, $paddingL, $paddingT, $color in (descripcion_literato, 10.5rem, 8rem, #e3e3e3),
-			                          (descripcion_patitas, 10rem, 8rem, #a32f62),
-			                          (descripcion_web1, 12.5rem, 6.5rem, #e3e3e3), 
-			                          (descripcion_web2, 11.7rem, 6.5rem, #e3e3e3){
+		@each $descripcion, $paddingL, $paddingT, $color, $paddingLr, $paddingTr in (descripcion_literato, 10.5rem, 8rem, #e3e3e3, 45%, 35%),
+			                          (descripcion_patitas, 10rem, 8rem, #a32f62, 45%, 35%),
+			                          (descripcion_web1, 12.5rem, 6.5rem, #e3e3e3, 50%, 25%), 
+			                          (descripcion_web2, 11.7rem, 6.5rem, #e3e3e3, 47%, 25%){
 			  .#{$descripcion}{
 			    padding-top: $paddingT;
 				padding-left:$paddingL;
 				color:$color;
+
+					@include phone {	
+					padding-left:$paddingLr;
+					padding-top: $paddingTr;
+					}
+
 			  }
 			}
 
@@ -22,16 +30,25 @@
 }
 
 .card {
-	height: 420px;
 	width: 370px;
 	display: flex;
 	flex-direction: column;
 	align-items: space-evenly;
 	border-radius: .5rem;
 
-	.imagen {
+		@include phone {	
+		width: 100vw;
+		}
+
+
+	.Cimagen {
 	position:absolute;
 	z-index: 0;
+
+		@include phone {	
+		width: 97%;
+		height: auto;
+		}
 	}
 
 	.descripcion {
@@ -39,6 +56,11 @@
 	font-size: 0.9rem;
 	position: absolute;
 	z-index: 1;
+
+		@include phone {
+          font-size: 3.5vw;
+        }
+
 	}
 
 	.button {
@@ -53,11 +75,22 @@
 		position: absolute;
 		z-index: 1;
 
+			@include phone {
+          	width: 25%;
+			height: 10%;
+			margin-top: 50%;
+			margin-left: 45%;
+       		}
+
 		a {
 		text-decoration: none;
 		font-weight: 700;
 		font-size: 0.8rem;
 		color: black;
+
+			@include phone {
+          		font-size: 4vw;
+       		}
 		}
 		
 		a:hover {
@@ -69,11 +102,21 @@
 
 	.button--web1 {
 		margin-top: 11rem;
+
+			@include phone {
+			margin-top: 40%;
+			margin-left: 50%;
+       		}
 	}
 
 	.button--web2 {
 		margin-top: 11rem;
 		margin-left: 15rem;
+
+		@include phone {
+			margin-top: 40%;
+			margin-left: 65%;
+       		}
 	}
 
 

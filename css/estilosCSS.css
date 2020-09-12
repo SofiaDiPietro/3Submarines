@@ -19,10 +19,6 @@ body {
   grid-template-areas: "logo nav";
   width: 100%;
   grid-area: header; }
-  @media only screen and (max-width: 768px) {
-    #cabecera {
-      grid-template-columns: 0.2fr 1fr;
-      grid-template-areas: "logo nav"; } }
   #cabecera .logo {
     grid-area: logo;
     width: 50px;
@@ -34,83 +30,34 @@ body {
     @media only screen and (min-width: 768px) and (max-width: 992px) {
       #cabecera .logo {
         margin-left: 2rem; } }
-  #cabecera nav {
+  #cabecera .menu {
     grid-area: nav; }
-    @media only screen and (max-width: 768px) {
-      #cabecera nav {
-        margin-top: 2rem;
-        margin-bottom: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end; } }
-    @media only screen and (min-width: 768px) and (max-width: 992px) {
-      #cabecera nav {
-        margin-top: 2rem; } }
-    #cabecera nav ul {
+    #cabecera .menu ul {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
       padding-top: 2rem; }
-      @media only screen and (max-width: 768px) {
-        #cabecera nav ul {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          padding-top: 4rem;
-          overflow: hidden;
-          max-height: 0;
-          padding: 0;
-          margin-right: 4.5rem;
-          -webkit-transition: all 0.3s ease; } }
-    #cabecera nav li {
+    #cabecera .menu li {
       list-style: none; }
-      @media only screen and (max-width: 768px) {
-        #cabecera nav li {
-          padding-top: 1rem; } }
-    #cabecera nav a {
+    #cabecera .menu a {
       text-decoration: none;
       font-weight: 700;
       font-size: 1.1rem;
       color: white;
       padding-left: 1rem;
       padding-right: 1rem; }
-      @media only screen and (max-width: 768px) {
-        #cabecera nav a {
-          padding-left: 0rem;
-          padding-right: 0rem; } }
-    #cabecera nav a:hover {
+    #cabecera .menu a:hover {
       color: orange; }
-    #cabecera nav #current {
+    #cabecera .menu #current {
       color: white;
       border-bottom: 3px solid;
       opacity: 0.8;
       padding-bottom: 0.8rem; }
-      @media only screen and (max-width: 768px) {
-        #cabecera nav #current {
-          border-bottom: 2px solid;
-          padding-bottom: 0.2rem; } }
 
-#hamburguesa, #menu-toggle {
+.navbar {
   display: none; }
-  @media only screen and (max-width: 768px) {
-    #hamburguesa, #menu-toggle {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      z-index: 1; } }
-
-@media only screen and (max-width: 768px) {
-  .raya1, .raya2 {
-    width: 30px;
-    height: 2px;
-    background-color: white; }
-  .raya1 {
-    margin-bottom: 0.5rem; }
-  #menu-toggle {
+  .navbar a {
     display: none; }
-  #menu-toggle:checked + ul {
-    max-height: 200px; } }
 
 /*GRILLAS*/
 .gridIndex {
@@ -121,8 +68,8 @@ body {
   @media only screen and (max-width: 768px) {
     .gridIndex {
       grid-template-columns: 100%;
-      grid-template-rows: 0.3fr 0.9fr 2fr 1fr;
-      grid-template-areas: "header" "imagen"  "section" "footer"; } }
+      grid-template-rows: 0.3fr 0.9fr 2fr 0.2fr 0.2fr;
+      grid-template-areas: "header" "imagen"  "section" "footer" "navbar"; } }
   @media only screen and (min-width: 768px) and (max-width: 992px) {
     .gridIndex {
       grid-template-columns: 100%;
@@ -137,10 +84,10 @@ body {
   grid-template-areas: "header header header header" "texto space1 space2 next"  "footer footer footer footer"; }
   @media only screen and (max-width: 768px) {
     .gridUxWeb {
-      grid-template-columns: 2fr;
-      grid-template-rows: 0.5fr 1fr 2fr 2fr 0.5fr;
+      grid-template-columns: 100%;
+      grid-template-rows: 0.5fr 0.6fr 2.5fr 2.5fr 0.5fr 0.2fr;
       grid-row-gap: 16px;
-      grid-template-areas: "header" "texto" "space1"  "space2"  "footer"; } }
+      grid-template-areas: "header" "texto" "space1"  "space2"  "footer" "navbar"; } }
   @media only screen and (min-width: 768px) and (max-width: 992px) {
     .gridUxWeb {
       grid-template-columns: 2fr;
@@ -154,12 +101,23 @@ body {
   grid-template-rows: 0.5fr 2fr 0.5fr;
   grid-row-gap: 16px;
   grid-template-areas: "header header header header header" "texto animador diseñador programador next"  "footer footer footer footer footer"; }
+  @media only screen and (max-width: 768px) {
+    .gridTeam {
+      grid-template-columns: 100%;
+      grid-template-rows: 0.3fr 0.3fr 1fr 1fr 1fr 0.2fr 0.2fr;
+      grid-row-gap: 16px;
+      grid-template-areas: "header" "texto" "animador" "diseñador" "programador"  "footer " "navbar"; } }
 
 .gridContact {
   display: grid;
   grid-template-columns: 0.5fr 1fr;
   grid-template-rows: 0.5fr 2fr 0.5fr;
   grid-template-areas: "header header" "texto formulario"  "footer footer"; }
+  @media only screen and (max-width: 768px) {
+    .gridContact {
+      grid-template-columns: 100%;
+      grid-template-rows: 0.5fr 0.6fr 2fr 0.2fr 0.3fr;
+      grid-template-areas: "header" "texto" "formulario"  "footer" "navbar"; } }
 
 /*INDEX*/
 .Stitulo {
@@ -236,7 +194,7 @@ section {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   @media only screen and (max-width: 768px) {
     .Sboton {
-      margin-left: 20vw; } }
+      margin-left: 20%; } }
   @media only screen and (min-width: 768px) and (max-width: 992px) {
     .Sboton {
       margin-left: 20vw;
@@ -263,6 +221,10 @@ section {
   font-weight: 900;
   font-style: none;
   font-size: 2.5rem; }
+  @media only screen and (max-width: 768px) {
+    .titulo {
+      font-size: 12vw;
+      padding-top: 0; } }
 
 .subtitulo {
   grid-area: p;
@@ -270,6 +232,10 @@ section {
   font-weight: 700;
   font-style: italic;
   font-size: 1.5rem; }
+  @media only screen and (max-width: 768px) {
+    .subtitulo {
+      font-size: 8vw;
+      padding-top: 3vh; } }
 
 .parrafo {
   grid-area: p;
@@ -277,6 +243,11 @@ section {
   font-weight: 700;
   font-style: italic;
   font-size: 1.25rem; }
+  @media only screen and (max-width: 768px) {
+    .parrafo {
+      font-size: 6vw;
+      padding-top: 2vh;
+      padding-bottom: 10vh; } }
 
 .tituloWeb {
   grid-area: h1;
@@ -284,6 +255,10 @@ section {
   font-weight: 900;
   font-style: none;
   font-size: 2rem; }
+  @media only screen and (max-width: 768px) {
+    .tituloWeb {
+      font-size: 10vw;
+      padding-top: 4vh; } }
 
 .texto {
   grid-area: texto;
@@ -292,10 +267,21 @@ section {
   grid-template-rows: 0.4fr 2fr;
   grid-template-areas: "h1" "p";
   padding-left: 6.25rem; }
+  @media only screen and (max-width: 768px) {
+    .texto {
+      padding-left: 1rem;
+      grid-template-rows: 0.4fr 1fr; } }
   .texto .subtitulo {
     padding-top: 1rem; }
   .texto .parrafo2 {
     padding-top: 4rem; }
+    @media only screen and (max-width: 768px) {
+      .texto .parrafo2 {
+        display: flex;
+        flex-direction: row; } }
+  @media only screen and (max-width: 768px) {
+    .texto .separacion {
+      padding-right: 0.7rem; } }
   .texto .parrafo-paddingWeb {
     padding-top: 1rem; }
 
@@ -350,6 +336,9 @@ section {
   grid-area: next; }
   .next .flecha {
     max-height: 20px; }
+  @media only screen and (max-width: 768px) {
+    .next {
+      display: none; } }
 
 /*CARDS UX WEB*/
 .literato {
@@ -358,18 +347,34 @@ section {
     padding-top: 8rem;
     padding-left: 10.5rem;
     color: #e3e3e3; }
+    @media only screen and (max-width: 768px) {
+      .literato .descripcion_literato {
+        padding-left: 45%;
+        padding-top: 35%; } }
   .literato .descripcion_patitas {
     padding-top: 8rem;
     padding-left: 10rem;
     color: #a32f62; }
+    @media only screen and (max-width: 768px) {
+      .literato .descripcion_patitas {
+        padding-left: 45%;
+        padding-top: 35%; } }
   .literato .descripcion_web1 {
     padding-top: 6.5rem;
     padding-left: 12.5rem;
     color: #e3e3e3; }
+    @media only screen and (max-width: 768px) {
+      .literato .descripcion_web1 {
+        padding-left: 50%;
+        padding-top: 25%; } }
   .literato .descripcion_web2 {
     padding-top: 6.5rem;
     padding-left: 11.7rem;
     color: #e3e3e3; }
+    @media only screen and (max-width: 768px) {
+      .literato .descripcion_web2 {
+        padding-left: 47%;
+        padding-top: 25%; } }
 
 .patitas {
   grid-area: space2; }
@@ -377,18 +382,34 @@ section {
     padding-top: 8rem;
     padding-left: 10.5rem;
     color: #e3e3e3; }
+    @media only screen and (max-width: 768px) {
+      .patitas .descripcion_literato {
+        padding-left: 45%;
+        padding-top: 35%; } }
   .patitas .descripcion_patitas {
     padding-top: 8rem;
     padding-left: 10rem;
     color: #a32f62; }
+    @media only screen and (max-width: 768px) {
+      .patitas .descripcion_patitas {
+        padding-left: 45%;
+        padding-top: 35%; } }
   .patitas .descripcion_web1 {
     padding-top: 6.5rem;
     padding-left: 12.5rem;
     color: #e3e3e3; }
+    @media only screen and (max-width: 768px) {
+      .patitas .descripcion_web1 {
+        padding-left: 50%;
+        padding-top: 25%; } }
   .patitas .descripcion_web2 {
     padding-top: 6.5rem;
     padding-left: 11.7rem;
     color: #e3e3e3; }
+    @media only screen and (max-width: 768px) {
+      .patitas .descripcion_web2 {
+        padding-left: 47%;
+        padding-top: 25%; } }
 
 .web1 {
   grid-area: space1; }
@@ -396,18 +417,34 @@ section {
     padding-top: 8rem;
     padding-left: 10.5rem;
     color: #e3e3e3; }
+    @media only screen and (max-width: 768px) {
+      .web1 .descripcion_literato {
+        padding-left: 45%;
+        padding-top: 35%; } }
   .web1 .descripcion_patitas {
     padding-top: 8rem;
     padding-left: 10rem;
     color: #a32f62; }
+    @media only screen and (max-width: 768px) {
+      .web1 .descripcion_patitas {
+        padding-left: 45%;
+        padding-top: 35%; } }
   .web1 .descripcion_web1 {
     padding-top: 6.5rem;
     padding-left: 12.5rem;
     color: #e3e3e3; }
+    @media only screen and (max-width: 768px) {
+      .web1 .descripcion_web1 {
+        padding-left: 50%;
+        padding-top: 25%; } }
   .web1 .descripcion_web2 {
     padding-top: 6.5rem;
     padding-left: 11.7rem;
     color: #e3e3e3; }
+    @media only screen and (max-width: 768px) {
+      .web1 .descripcion_web2 {
+        padding-left: 47%;
+        padding-top: 25%; } }
 
 .web2 {
   grid-area: space2; }
@@ -415,34 +452,59 @@ section {
     padding-top: 8rem;
     padding-left: 10.5rem;
     color: #e3e3e3; }
+    @media only screen and (max-width: 768px) {
+      .web2 .descripcion_literato {
+        padding-left: 45%;
+        padding-top: 35%; } }
   .web2 .descripcion_patitas {
     padding-top: 8rem;
     padding-left: 10rem;
     color: #a32f62; }
+    @media only screen and (max-width: 768px) {
+      .web2 .descripcion_patitas {
+        padding-left: 45%;
+        padding-top: 35%; } }
   .web2 .descripcion_web1 {
     padding-top: 6.5rem;
     padding-left: 12.5rem;
     color: #e3e3e3; }
+    @media only screen and (max-width: 768px) {
+      .web2 .descripcion_web1 {
+        padding-left: 50%;
+        padding-top: 25%; } }
   .web2 .descripcion_web2 {
     padding-top: 6.5rem;
     padding-left: 11.7rem;
     color: #e3e3e3; }
+    @media only screen and (max-width: 768px) {
+      .web2 .descripcion_web2 {
+        padding-left: 47%;
+        padding-top: 25%; } }
 
 .card {
-  height: 420px;
   width: 370px;
   display: flex;
   flex-direction: column;
   align-items: space-evenly;
   border-radius: .5rem; }
-  .card .imagen {
+  @media only screen and (max-width: 768px) {
+    .card {
+      width: 100vw; } }
+  .card .Cimagen {
     position: absolute;
     z-index: 0; }
+    @media only screen and (max-width: 768px) {
+      .card .Cimagen {
+        width: 97%;
+        height: auto; } }
   .card .descripcion {
     font-weight: 400;
     font-size: 0.9rem;
     position: absolute;
     z-index: 1; }
+    @media only screen and (max-width: 768px) {
+      .card .descripcion {
+        font-size: 3.5vw; } }
   .card .button {
     background-color: white;
     border-radius: 0.5rem;
@@ -454,18 +516,35 @@ section {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: absolute;
     z-index: 1; }
+    @media only screen and (max-width: 768px) {
+      .card .button {
+        width: 25%;
+        height: 10%;
+        margin-top: 50%;
+        margin-left: 45%; } }
     .card .button a {
       text-decoration: none;
       font-weight: 700;
       font-size: 0.8rem;
       color: black; }
+      @media only screen and (max-width: 768px) {
+        .card .button a {
+          font-size: 4vw; } }
     .card .button a:hover {
       color: #a834eb; }
   .card .button--web1 {
     margin-top: 11rem; }
+    @media only screen and (max-width: 768px) {
+      .card .button--web1 {
+        margin-top: 40%;
+        margin-left: 50%; } }
   .card .button--web2 {
     margin-top: 11rem;
     margin-left: 15rem; }
+    @media only screen and (max-width: 768px) {
+      .card .button--web2 {
+        margin-top: 40%;
+        margin-left: 65%; } }
 
 .card:hover {
   transform: perspective(500px) rotateY(10deg) rotateX(5deg);
@@ -477,18 +556,30 @@ section {
   background: linear-gradient(to bottom, #2597BC, #32b7e3);
   margin-left: 4rem;
   margin-right: 1rem; }
+  @media only screen and (max-width: 768px) {
+    .animador {
+      margin-left: 4.5vh;
+      margin-right: 4.5vh; } }
 
 .diseñador {
   grid-area: diseñador;
   background: linear-gradient(to bottom, #8836B2, #A845DA);
   margin-left: 1.3rem;
   margin-right: 1.3rem; }
+  @media only screen and (max-width: 768px) {
+    .diseñador {
+      margin-left: 4.5vh;
+      margin-right: 4.5vh; } }
 
 .programador {
   grid-area: programador;
   background: linear-gradient(to bottom, #55AC3B, #69D549);
   margin-left: 1rem;
   margin-right: 0.4rem; }
+  @media only screen and (max-width: 768px) {
+    .programador {
+      margin-left: 4.5vh;
+      margin-right: 4.5vh; } }
 
 .team {
   height: 400px;
@@ -498,6 +589,11 @@ section {
   align-items: space-evenly;
   border-radius: .5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  @media only screen and (max-width: 768px) {
+    .team {
+      width: 90vw;
+      justify-content: center;
+      align-items: center; } }
   .team .nombre {
     color: white;
     font-size: 2rem;
@@ -516,12 +612,18 @@ section {
     color: white;
     display: flex;
     justify-content: center; }
-  .team .imagen {
+  .team .Timagen {
     width: 170px;
-    height: 170px;
     margin-left: 2.4rem;
     margin-top: 1.6rem;
     margin-bottom: 1.6rem; }
+    @media only screen and (max-width: 768px) {
+      .team .Timagen {
+        max-width: 50%;
+        height: auto;
+        margin-left: 0;
+        margin-top: 1rem;
+        margin-bottom: 1.6rem; } }
 
 /*CONTACT US*/
 .formulario {
@@ -535,6 +637,11 @@ section {
   justify-content: center;
   padding: 1rem 1.5rem 1.2rem 1.5rem;
   margin-left: 5.5rem; }
+  @media only screen and (max-width: 768px) {
+    .formulario {
+      width: 88%;
+      padding: 0 1.5rem 0.5rem 1.5rem;
+      margin-left: 1.5rem; } }
   .formulario .bottom {
     display: flex;
     flex-direction: row;
@@ -561,9 +668,11 @@ label {
   justify-content: space-between;
   align-content: center;
   position: fixed;
-  width: 100%;
-  left: 0;
   bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  margin-top: 50px;
   background-color: #2f384f;
   color: #bdbdbd;
   padding-top: 0.4rem;
@@ -572,9 +681,11 @@ label {
     #pie {
       display: flex;
       flex-direction: column;
-      justify-content: flex-star;
+      justify-content: space-evenly;
       font-size: 0.8rem;
-      height: 40px; } }
+      height: 10em;
+      grid-area: footer;
+      position: static; } }
   #pie img {
     max-width: 1.2rem; }
   #pie #redes {
@@ -597,3 +708,33 @@ label {
       #pie #copyright {
         padding-right: 0;
         padding-left: 1.5rem; } }
+
+@media only screen and (max-width: 768px) {
+  .menu {
+    display: none; }
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    background-color: #411191;
+    position: fixed !important;
+    z-index: 4;
+    bottom: 0;
+    width: 100%;
+    grid-area: navbar;
+    padding: 0.3rem !important; }
+    .navbar .current {
+      color: #89CAB6; }
+    .navbar .iconos {
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      text-decoration: none;
+      font-size: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem; }
+  .navbar a img {
+    max-width: 1.5rem; } }

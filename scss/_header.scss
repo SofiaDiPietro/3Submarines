@@ -16,12 +16,6 @@ $color-font:white;
 	width: 100%;
 	grid-area: header;
 
-		@include phone {
-		grid-template-columns: 0.2fr 1fr;
-		grid-template-areas: 
-  		"logo nav";
-		} 
-
 	.logo {
 		grid-area: logo;
 		width: 50px;
@@ -37,49 +31,19 @@ $color-font:white;
 		  	}
 	}
 		
-	nav {
+	.menu {
 		grid-area: nav;
-
-				@include phone {
-				margin-top: 2rem;
-				margin-bottom: 0;
-				display: flex;
-				flex-direction: row;
-				justify-content: flex-end;
-
-				  	}
-
-				@include tablet {
-				margin-top: 2rem;
-				 }
 
 			ul {
 				display: flex;
 				flex-direction: row;
 				justify-content: flex-start;
 				padding-top: $padding-size;
-
-					@include phone {
-					display: flex;
-					flex-direction: column;
-					align-items:center;
-					justify-content:center;
-					padding-top: 4rem;
-					overflow: hidden;
-					max-height: 0;
-					padding: 0;
-					margin-right: 4.5rem;
-					-webkit-transition: all 0.3s ease;
-					}
 				}
 
 			li {
 				list-style:none;
-
-					@include phone {
-						padding-top:1rem;
-					}
-			}
+				}
 			
 			a {
 				text-decoration: none;
@@ -88,13 +52,7 @@ $color-font:white;
 				color: $color-font;
 				padding-left: ($padding-size)-1rem;
 				padding-right: ($padding-size)-1rem;
-
-				@include phone {
-						padding-left:0rem;
-						padding-right:0rem;
-					}
-
-			}
+				}
 			
 			a:hover {
 				color: orange;
@@ -105,51 +63,17 @@ $color-font:white;
 				border-bottom:3px solid;
 				opacity: 0.8;
 				padding-bottom:($padding-size)-1.2rem;
-
-					@include phone {
-					border-bottom:2px solid;
-					padding-bottom: 0.2rem;
-					}
 			}
 
-		}
+	}
 }
 
 
-#hamburguesa, #menu-toggle, {
- display: none;
+.navbar {
+	display:none;
 
- 	@include phone {
- 	display: flex;
- 	flex-direction:column;
-	position: absolute;
-	z-index: 1;
- 	}
-
+	a{
+		display:none;
+	}
 }
 
-
-
-@include phone {
-	
-	.raya1, .raya2 {
-	width:30px;
-	height:2px;
-	background-color:white;
-	}
-
-	.raya1{
-	margin-bottom: 0.5rem;
-	}
-
-
-	#menu-toggle {
-	display: none;
-	}
-
-	#menu-toggle:checked + ul {
-	max-height: 200px;
-	}
-
-  } 
-    

@@ -92,7 +92,7 @@ margin-top: 20px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       
       @include phone {
-          margin-left:20vw;
+          margin-left:20%;
         }
 
       @include tablet {
@@ -124,16 +124,23 @@ color: black;
 
 /*UX-WEB-TEAM-CONTACT*/
 
-@each $text, $grid, $color, $font-weight, $font-style, $font-size in (titulo, h1, white, 900, none, 2.5rem),
-                          (subtitulo, p, white, 700, italic, 1.5rem),
-                          (parrafo, p, white, 700, italic, 1.25rem,), 
-                          (tituloWeb, h1, white, 900, none, 2rem){
+@each $text, $grid, $color, $font-weight, $font-style, $font-size, $font-responsive, $padding-top, $padding-bottom in (titulo, h1, white, 900, none, 2.5rem, 12vw, 0),
+                          (subtitulo, p, white, 700, italic, 1.5rem, 8vw, 3vh),
+                          (parrafo, p, white, 700, italic, 1.25rem,6vw, 2vh, 10vh), 
+                          (tituloWeb, h1, white, 900, none, 2rem, 10vw, 4vh){
   .#{$text}{
     grid-area: $grid;
     color:$color;
     font-weight: $font-weight;
     font-style: $font-style;
     font-size: $font-size;
+
+      @include phone {
+        font-size: $font-responsive;
+        padding-top: $padding-top;
+        padding-bottom: $padding-bottom;
+
+      }
   }
 }
 
@@ -147,13 +154,29 @@ color: black;
     "p";
   padding-left: ($padding)+4.25rem;
 
+    @include phone {
+      padding-left: 1rem;
+      grid-template-rows: 0.4fr 1fr;
+    }
+
     .subtitulo {
     padding-top: ($padding)-1rem;
   }
 
     .parrafo2  {
-   padding-top: 4rem
-  }
+   padding-top: 4rem;
+
+      @include phone {
+        display:flex;
+       flex-direction:row;
+     }
+   }
+
+   .separacion {
+       @include phone {
+        padding-right:0.7rem;
+       }
+   }
 
    .parrafo-paddingWeb {
   padding-top: ($padding)-1rem;

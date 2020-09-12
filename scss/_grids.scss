@@ -13,12 +13,13 @@
 
   @include phone {
   grid-template-columns: 100%;
-  grid-template-rows: 0.3fr 0.9fr 2fr 1fr;
+  grid-template-rows: 0.3fr 0.9fr 2fr 0.2fr 0.2fr;
   grid-template-areas: 
  "header"
  "imagen" 
  "section"
- "footer"; 
+ "footer"
+ "navbar"; 
   }
 
  @include tablet {
@@ -39,32 +40,33 @@
  	grid-template-rows: 0.5fr 2fr 0.5fr;
  	grid-row-gap: 16px; 
   	grid-template-areas: 
-  	"header header header header"
+  "header header header header"
  	"texto space1 space2 next" 
-  	"footer footer footer footer";
+  "footer footer footer footer";
 
-    @include phone {
-  grid-template-columns: 2fr;
-  grid-template-rows: 0.5fr 1fr 2fr 2fr 0.5fr;
-  grid-row-gap: 16px; 
-    grid-template-areas: 
-  "header"
-  "texto"
-  "space1" 
-  "space2" 
-  "footer";
-      }
+        @include phone {
+      grid-template-columns: 100%;
+      grid-template-rows: 0.5fr 0.6fr 2.5fr 2.5fr 0.5fr 0.2fr;
+      grid-row-gap: 16px; 
+      grid-template-areas: 
+      "header"
+      "texto"
+      "space1" 
+      "space2" 
+      "footer"
+      "navbar"; 
+          }
 
-      @include tablet {
-   grid-template-columns: 2fr;
-  grid-template-rows: 0.5fr 1fr 2fr 2fr 0.5fr;
-  grid-row-gap: 16px; 
-   grid-template-areas: 
-  "header"
-  "texto"
-  "space1" 
-  "space2" 
-  "footer";
+          @include tablet {
+       grid-template-columns: 2fr;
+      grid-template-rows: 0.5fr 1fr 2fr 2fr 0.5fr;
+      grid-row-gap: 16px; 
+       grid-template-areas: 
+      "header"
+      "texto"
+      "space1" 
+      "space2" 
+      "footer";
       }
   }
 
@@ -78,6 +80,20 @@
   "header header header header header"
  	"texto animador diseñador programador next" 
   "footer footer footer footer footer";
+
+      @include phone {
+    grid-template-columns: 100%;
+    grid-template-rows: 0.3fr 0.3fr 1fr 1fr 1fr 0.2fr 0.2fr;
+    grid-row-gap: 16px;
+    grid-template-areas: 
+    "header"
+    "texto"
+    "animador"
+    "diseñador"
+    "programador" 
+    "footer "
+    "navbar";
+      }
 }
  
  .gridContact {
@@ -88,5 +104,16 @@
   	"header header"
  	"texto formulario" 
   	"footer footer";
+
+     @include phone {
+    grid-template-columns: 100%;
+     grid-template-rows: 0.5fr 0.6fr 2fr 0.2fr 0.3fr;
+     grid-template-areas: 
+      "header"
+      "texto"
+      "formulario" 
+      "footer"
+      "navbar";
+     }
 }
 
