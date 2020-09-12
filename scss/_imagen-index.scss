@@ -66,4 +66,8 @@ max-width: 27rem;
     .flecha {
     max-height: 20px
    }
+
+   @include phone {
+        display:none;
+      }
  }
