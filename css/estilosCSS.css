@@ -303,7 +303,8 @@ section {
   grid-template-columns: 100%;
   grid-template-rows: 0.4fr 2fr;
   grid-template-areas: "h1" "p";
-  padding-left: 6.25rem; }
+  padding-left: 6.25rem;
+  padding-top: 2rem; }
   @media only screen and (max-width: 768px) {
     .texto {
       padding-left: 5vw;
@@ -602,7 +603,8 @@ section {
   display: flex;
   flex-direction: column;
   align-items: space-evenly;
-  border-radius: .5rem; }
+  border-radius: .5rem;
+  padding-top: 1rem; }
   @media only screen and (max-width: 768px) {
     .card {
       width: 100vw; } }
@@ -743,7 +745,8 @@ section {
   flex-direction: column;
   align-items: space-evenly;
   border-radius: .5rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-top: 1.5rem; }
   @media only screen and (max-width: 768px) {
     .team {
       width: 90vw;
