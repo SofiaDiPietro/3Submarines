@@ -173,6 +173,7 @@ color: black;
     "h1"
     "p";
   padding-left: ($padding)+4.25rem;
+  padding-top: 2rem;
 
     @include phone {
       padding-left: 5vw;
