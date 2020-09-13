@@ -70,4 +70,7 @@ max-width: 27rem;
    @include phone {
         display:none;
       }
+  @include tablet {
+        display:none;
+      }
  }

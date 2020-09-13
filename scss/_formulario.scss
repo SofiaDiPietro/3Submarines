@@ -16,6 +16,14 @@
 
 				@include phone {
 					width: 88%;
+					height: 60vh;
+					padding: 0 1.5rem 0.5rem 1.5rem;
+					margin-left: 1.5rem;
+				}
+
+				@include tablet {
+					width: 88%;
+					height: 60vh;
 					padding: 0 1.5rem 0.5rem 1.5rem;
 					margin-left: 1.5rem;
 				}

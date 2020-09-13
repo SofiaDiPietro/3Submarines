@@ -12,25 +12,44 @@ position:fixed;
 bottom:0;
 left:0;
 width: 100%;
-height:40px;
+height:9vh;
 margin-top:50px;
 background-color: #2f384f;
 color:#bdbdbd;
-padding-top: 0.4rem;
+padding-top: 0.8rem;
 grid-area: footer;
 
 	@include phone {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-evenly;
-			font-size: 0.8rem;
+			font-size:4vw;
+			height:10em;
+			grid-area: footer;
+			position:static;
+		  	}
+
+
+	@include tablet {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			font-size: 4vw;
 			height:10em;
 			grid-area: footer;
 			position:static;
 		  	}
 
     img {
-    max-width:1.2rem;
+    width:2.3vw;
+
+    	@include phone {
+				 min-width:8vw;
+			  	}
+
+    	@include tablet {
+				 width:7vw;
+			  	}
     }
 
 	#redes {
@@ -39,6 +58,13 @@ grid-area: footer;
 	padding-left: 100px;
 
 		@include phone {
+				align-items: center;
+				padding-left: 1.5rem;
+				justify-content: flex-start;
+			  	}
+
+		@include tablet {
+				align-items: center;
 				padding-left: 1.5rem;
 				justify-content: flex-start;
 			  	}
@@ -59,8 +85,13 @@ grid-area: footer;
 	padding-right: 6.25rem;
 
 		@include phone {
-				padding-right: 0;
+				padding-right: 0.2rem;
 				padding-left: 1.5rem;
+				padding-bottom:0.5rem;
+			  	}
+		@include tablet {
+				padding-left: 1.5rem;
+				justify-content: flex-start;
 			  	}
 
 

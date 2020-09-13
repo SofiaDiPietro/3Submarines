@@ -24,12 +24,13 @@
 
  @include tablet {
   grid-template-columns: 100%;
-  grid-template-rows: 0.3fr 0.9fr 2fr 1fr;
+  grid-template-rows: 0.3fr 0.9fr 1.5fr 0fr 0.2fr;
   grid-template-areas: 
  "header"
  "imagen" 
  "section"
- "footer"; 
+ "footer"
+ "navbar"; 
   }
 
 }
@@ -44,29 +45,29 @@
  	"texto space1 space2 next" 
   "footer footer footer footer";
 
-        @include phone {
-      grid-template-columns: 100%;
-      grid-template-rows: 0.5fr 0.6fr 2.5fr 2.5fr 0.5fr 0.2fr;
-      grid-row-gap: 16px; 
-      grid-template-areas: 
-      "header"
-      "texto"
-      "space1" 
-      "space2" 
-      "footer"
-      "navbar"; 
-          }
+            @include phone {
+          grid-template-columns: 100%;
+          grid-template-rows: 0.5fr 0.6fr 2.5fr 2.5fr 0.5fr 0.2fr;
+          grid-row-gap: 16px; 
+          grid-template-areas: 
+          "header"
+          "texto"
+          "space1" 
+          "space2" 
+          "footer"
+          "navbar"; 
+              }
 
           @include tablet {
-       grid-template-columns: 2fr;
-      grid-template-rows: 0.5fr 1fr 2fr 2fr 0.5fr;
-      grid-row-gap: 16px; 
-       grid-template-areas: 
-      "header"
-      "texto"
-      "space1" 
-      "space2" 
-      "footer";
+          grid-template-columns: 50% 50%;
+          grid-template-rows: 0.5fr 1fr 1.3fr 0.5fr 0.2fr;
+          grid-row-gap: 0; 
+           grid-template-areas: 
+          "header header"
+          "texto texto"
+          "space1 space2"  
+          "footer footer"
+          "navbar navbar";
       }
   }
 
@@ -94,6 +95,18 @@
     "footer "
     "navbar";
       }
+
+     @include tablet {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 0.3fr 0.3fr 1fr 1fr 0.2fr 0.2fr;
+    grid-template-areas: 
+    "header header"
+    "texto texto"
+    "animador diseñador"
+    "programador ..." 
+    "footer footer "
+    "navbar navbar";
+      }
 }
  
  .gridContact {
@@ -108,6 +121,17 @@
      @include phone {
     grid-template-columns: 100%;
      grid-template-rows: 0.5fr 0.6fr 2fr 0.2fr 0.3fr;
+     grid-template-areas: 
+      "header"
+      "texto"
+      "formulario" 
+      "footer"
+      "navbar";
+     }
+
+     @include tablet {
+    grid-template-columns: 100%;
+     grid-template-rows: 0.5fr 0.6fr 2fr 0.2fr 0.2fr;
      grid-template-areas: 
       "header"
       "texto"

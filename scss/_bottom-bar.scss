@@ -19,8 +19,52 @@
 	grid-area: navbar;
 	padding:0.3rem !important;
 
-		.current {
-			color: #89CAB6;
+	#current {
+		color: #89CAB6;
+		}
+
+	.iconos{
+	  display: block;
+	  color: #f2f2f2;
+	  text-align: center;
+	  text-decoration: none;
+	  font-size: 0.8rem;
+	  display: flex;
+	  flex-direction:column;
+	  justify-content:center;
+	  align-items:center;
+	  padding:0.5rem;
+		}
+	}
+
+
+	.navbar a img {
+		max-width:1.5rem;
+	}
+
+
+  } 
+
+  @include tablet {
+	
+	.menu {
+	display:none;
+	}
+	
+	.navbar {
+	display:flex;
+	justify-content:space-around;
+	overflow: hidden;
+	background-color: #411191;
+	position:fixed !important;
+	z-index:4;
+	bottom:0;
+	width: 100%;
+	grid-area: navbar;
+	padding:0.3rem !important;
+
+	#current {
+		color: #89CAB6;
 		}
 
 	.iconos{

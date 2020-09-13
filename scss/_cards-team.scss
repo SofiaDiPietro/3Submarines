@@ -2,9 +2,9 @@
 
 /*CARDS OUR TEAM*/
 
-@each $member, $background, $marginl, $marginR, $marginlr, $marginRr in (animador, linear-gradient(to bottom, #2597BC, #32b7e3), 4rem, 1rem, 4.5vh, 4.5vh),
-                                  (diseñador, linear-gradient(to bottom, #8836B2, #A845DA), 1.3rem, 1.3rem, 4.5vh, 4.5vh),
-                                  (programador, linear-gradient(to bottom, #55AC3B, #69D549), 1rem, 0.4rem, 4.5vh, 4.5vh) {
+@each $member, $background, $marginl, $marginR, $marginlr, $marginRr, $marginlT, $marginRT in (animador, linear-gradient(to bottom, #2597BC, #32b7e3), 4rem, 1rem, 4.5vh, 4.5vh, 5vw, 2vw),
+                                  (diseñador, linear-gradient(to bottom, #8836B2, #A845DA), 1.3rem, 1.3rem, 4.5vh, 4.5vh, 2vw, 1vw),
+                                  (programador, linear-gradient(to bottom, #55AC3B, #69D549), 1rem, 0.4rem, 4.5vh, 4.5vh, 5vw, 3vw) {
   .#{$member}{
     grid-area: $member;
 	background: $background;
@@ -14,6 +14,11 @@
 	@include phone {	
 		margin-left: $marginlr;
 		margin-right: $marginRr;
+		}
+
+	@include tablet {	
+		margin-left: $marginlT;
+		margin-right: $marginRT;
 		}
   }
 }
@@ -37,12 +42,23 @@ $font-sizes: 1rem;
 			align-items: center;
 			}
 
+			@include tablet {	
+			width: 40vw;
+			justify-content:center;
+			align-items: center;
+			}
+
 		.nombre {
 		color:$color-font;
 		font-size: ($font-sizes)+1rem;
 		font-weight:900;
 		padding-left: 1rem;
 		padding-top: 0.5rem;
+
+				@include tablet {
+					justify-content:center;
+					padding: 0;
+				}	
 		}
 
 		.frase {
@@ -68,6 +84,14 @@ $font-sizes: 1rem;
 		margin-bottom: 1.6rem;
 
 			@include phone {	
+			max-width: 50%;
+			height:auto;
+			margin-left: 0;
+			margin-top: 1rem;
+			margin-bottom: 1.6rem;
+			}
+
+			@include tablet {	
 			max-width: 50%;
 			height:auto;
 			margin-left: 0;
